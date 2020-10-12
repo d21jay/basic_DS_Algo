@@ -92,7 +92,7 @@ int main() {
 			e = 'a';
 			cout<<"query again (y/n): ";
 			cin>>e;
-			while(e !='y' && e != 'n') {
+			while(e != 'y' && e != 'n') {
 				cout<<"(y/n) : ";
 				cin>>e;
 			}
