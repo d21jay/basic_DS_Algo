@@ -13,7 +13,10 @@ O(1) passing of array/list allowed.
 
 int main() {
 	string s;
-	char c1, c2;
+	//first initialization is tricky
+	//coz at any point of time c1 and c2 should not be same.
+	char c1 = '\n'; 
+	char c2 = ' ';
 	int count1, count2;
 	while(true){
 		cout<<"\nenter characters to find 3-majority (>n/3) : (or, exit with ctrl + c) :"<<endl;
@@ -23,11 +26,11 @@ int main() {
 		count1 = 0;
 		count2 = 0;
 		for(int i = 0; i<s.size(); i++) {
-			if(count1 == 0) {
+			if(count1 == 0 && s[i] != c2) {
 				c1 = s[i];
 				count1++;
 			}
-			else if(count2 == 0) {
+			else if(count2 == 0 && s[i] != c1) {
 				c2 = s[i];
 				count2++;	
 			}
