@@ -60,10 +60,11 @@ int main() {
 				bfn = *(new vector<int> (n, -1));
 				if(vs%2 == 0) vs--;
 				for(int i = 1; i < vs; i += 2) {
-					if(v[i] > 0 && v[i] <= n && v[i+1] > 0 && v[i+1] <= n)
+					if(v[i] > 0 && v[i] <= n && v[i+1] > 0 && v[i+1] <= n) {
 						edge[v[i]-1].push_back(v[i+1]);
 						if(v[i+1] != v[i])
 						edge[v[i+1]-1].push_back(v[i]);
+					}
 				}
 				cout<<"The graph edges: \n";
 				for(int i = 0; i < n; i++){
