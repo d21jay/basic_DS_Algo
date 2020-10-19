@@ -19,7 +19,6 @@ vector<int> heapPos;
 
 vector<vector<vector<int>>> edges;
 int V;
-int count;
 int mstn;
 
 bool cc(vector<int> &a, vector<int> &b) {
